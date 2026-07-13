@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kethan H | Unit Designee 2026</title>
+  <meta name="description" content="Campaign page for Kethan H, candidate for Unit Designee 2026.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+    :root {
+      --bg: #07131a;
+      --bg-soft: #10232d;
+      --panel: rgba(12, 28, 36, 0.76);
+      --panel-strong: rgba(15, 35, 45, 0.92);
+      --line: rgba(151, 205, 195, 0.18);
+      --line-strong: rgba(151, 205, 195, 0.34);
+      --text: #ecf4f0;
+      --muted: #a6bab2;
+      --muted-2: #79928a;
+      --accent: #ff7a45;
+      --accent-soft: rgba(255, 122, 69, 0.16);
+      --mint: #9ad9c7;
+      --gold: #f2c878;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --content-width: 1180px;
+      --nav-height: 72px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      font-family: 'Manrope', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(242, 200, 120, 0.08), transparent 28%),
+        radial-gradient(circle at 85% 12%, rgba(154, 217, 199, 0.14), transparent 24%),
+        radial-gradient(circle at 50% 120%, rgba(255, 122, 69, 0.12), transparent 30%),
+        linear-gradient(180deg, #07131a 0%, #0a1821 42%, #071118 100%);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(154, 217, 199, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(154, 217, 199, 0.05) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: radial-gradient(circle at center, black 45%, transparent 92%);
+      z-index: 0;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: #07131a;
+    }
+
+    .page-shell {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 32px), var(--content-width));
+      margin: 0 auto;
+      padding-bottom: 110px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: var(--nav-height);
+      padding: 16px 0;
+      backdrop-filter: blur(18px);
+    }
+
+    .topbar::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+    }
+
+    .brand-block {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 44px;
+      aspect-ratio: 1;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(145deg, rgba(255, 122, 69, 0.95), rgba(255, 184, 91, 0.9));
+      color: #08141a;
+      display: grid;
+      place-items: center;
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.06em;
+      box-shadow: 0 16px 40px rgba(255, 122, 69, 0.24);
+      flex-shrink: 0;
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .brand-copy strong,
+    .brand-copy span {
+      display: block;
+    }
+
+    .brand-copy strong {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-copy span {
+      margin-top: 3px;
+      color: var(--muted-2);
+      font-size: 0.8rem;
+    }
+
+    .topnav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .topnav a,
+    .mobile-dock a {
+      text-decoration: none;
+      color: var(--muted);
+      transition: color 180ms ease, border-color 180ms ease, background 180ms ease, transform 180ms ease;
+    }
+
+    .topnav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.92rem;
+    }
+
+    .topnav a:hover,
+    .topnav a:focus-visible,
+    .topnav a.active {
+      color: var(--text);
+      border-color: var(--line-strong);
+      background: rgba(255, 255, 255, 0.03);
+      transform: translateY(-1px);
+    }
+
+    main {
+      display: grid;
+      gap: clamp(72px, 10vw, 128px);
+      padding-top: clamp(18px, 5vw, 42px);
+    }
+
+    section {
+      scroll-margin-top: calc(var(--nav-height) + 28px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(154, 217, 199, 0.18);
+      background: rgba(12, 28, 36, 0.56);
+      color: var(--mint);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 8px rgba(255, 122, 69, 0.12);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 420px);
+      gap: clamp(28px, 5vw, 54px);
+      align-items: center;
+      padding-top: clamp(12px, 5vw, 28px);
+    }
+
+    .hero-copy {
+      display: grid;
+      gap: 26px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(3rem, 10vw, 6.4rem);
+      line-height: 0.92;
+      letter-spacing: -0.06em;
+      max-width: 8ch;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: transparent;
+      background: linear-gradient(180deg, #ffffff 0%, #cbddd7 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .hero p {
+      margin: 0;
+    }
+
+    .hero-lead {
+      max-width: 60ch;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      line-height: 1.8;
+    }
+
+    .hero-lead strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button,
+    .ghost-button {
+      min-height: 50px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
+      touch-action: manipulation;
+    }
+
+    .button {
+      background: linear-gradient(135deg, var(--accent), #ffb45f);
+      color: #07131a;
+      font-weight: 800;
+      box-shadow: 0 18px 44px rgba(255, 122, 69, 0.22);
+    }
+
+    .ghost-button {
+      border: 1px solid var(--line-strong);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .button:hover,
+    .button:focus-visible,
+    .ghost-button:hover,
+    .ghost-button:focus-visible,
+    .agenda-toggle:hover,
+    .agenda-toggle:focus-visible,
+    .cta-card a:hover,
+    .cta-card a:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 720px;
+    }
+
+    .stat-card {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    }
+
+    .stat-card strong,
+    .stat-card span {
+      display: block;
+    }
+
+    .stat-card strong {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      letter-spacing: -0.05em;
+    }
+
+    .stat-card span {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .hero-visual {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero-visual::before,
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(10px);
+      z-index: -1;
+    }
+
+    .hero-visual::before {
+      inset: 12% 8% auto auto;
+      width: 120px;
+      height: 120px;
+      background: rgba(255, 122, 69, 0.18);
+    }
+
+    .hero-visual::after {
+      inset: auto auto 5% 0;
+      width: 180px;
+      height: 180px;
+      background: rgba(154, 217, 199, 0.16);
+    }
+
+    .portrait-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(17, 40, 51, 0.9), rgba(10, 20, 26, 0.96));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow);
+      min-height: 100%;
+    }
+
+    .portrait-card img {
+      width: 100%;
+      aspect-ratio: 0.88;
+      object-fit: cover;
+      object-position: center top;
+      filter: saturate(1.02) contrast(1.02);
+    }
+
+    .portrait-overlay {
+      position: absolute;
+      inset: auto 18px 18px 18px;
+      padding: 18px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(7, 19, 26, 0.2), rgba(7, 19, 26, 0.78));
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .portrait-overlay strong,
+    .portrait-overlay span {
+      display: block;
+    }
+
+    .portrait-overlay strong {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .portrait-overlay span {
+      margin-top: 6px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.92rem;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 26px;
+    }
+
+    .section-kicker {
+      color: var(--gold);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      letter-spacing: -0.05em;
+      line-height: 1;
+    }
+
+    .section-head p {
+      margin: 12px 0 0;
+      max-width: 58ch;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+    .manifesto-panel {
+      position: relative;
+      padding: clamp(26px, 5vw, 42px);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(160deg, rgba(11, 28, 36, 0.94), rgba(15, 34, 42, 0.82));
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .manifesto-panel::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -80px auto;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(255, 122, 69, 0.18), transparent 66%);
+      pointer-events: none;
+    }
+
+    .manifesto-panel blockquote {
+      margin: 0;
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.35rem, 3vw, 2.15rem);
+      line-height: 1.5;
+      letter-spacing: -0.03em;
+      max-width: 24ch;
+    }
+
+    .manifesto-panel blockquote span {
+      color: var(--gold);
+    }
+
+    .manifesto-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: clamp(24px, 4vw, 40px);
+      align-items: end;
+    }
+
+    .manifesto-notes {
+      display: grid;
+      gap: 14px;
+    }
+
+    .note-card {
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .note-card strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .note-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.95rem;
+    }
+
+    .agenda-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .agenda-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      overflow: hidden;
+    }
+
+    .agenda-toggle {
+      width: 100%;
+      background: none;
+      border: 0;
+      color: inherit;
+      padding: 22px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 14px;
+      align-items: start;
+      text-align: left;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    .agenda-index {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 122, 69, 0.12);
+      border: 1px solid rgba(255, 122, 69, 0.18);
+      color: var(--accent);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .agenda-title strong,
+    .agenda-title span {
+      display: block;
+    }
+
+    .agenda-title strong {
+      font-size: 1.02rem;
+      line-height: 1.4;
+    }
+
+    .agenda-title span {
+      margin-top: 7px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.93rem;
+    }
+
+    .agenda-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      color: var(--mint);
+      transition: transform 220ms ease, background 220ms ease;
+    }
+
+    .agenda-card[data-open="true"] .agenda-icon {
+      transform: rotate(45deg);
+      background: rgba(154, 217, 199, 0.08);
+    }
+
+    .agenda-panel {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 260ms ease;
+    }
+
+    .agenda-card[data-open="true"] .agenda-panel {
+      grid-template-rows: 1fr;
+    }
+
+    .agenda-panel-inner {
+      overflow: hidden;
+    }
+
+    .agenda-panel-content {
+      padding: 0 22px 22px 74px;
+      display: grid;
+      gap: 14px;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 0.95rem;
+    }
+
+    .agenda-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .agenda-tags span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      font-size: 0.8rem;
+    }
+
+    .systems-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .system-card {
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(18, 40, 49, 0.9), rgba(11, 24, 31, 0.92));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      min-height: 100%;
+    }
+
+    .system-card strong,
+    .system-card span,
+    .system-card p {
+      display: block;
+    }
+
+    .system-card span {
+      color: var(--gold);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .system-card strong {
+      font-size: 1.08rem;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .system-card p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.94rem;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .timeline-card {
+      position: relative;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      overflow: hidden;
+    }
+
+    .timeline-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--accent), rgba(255, 180, 95, 0.1));
+    }
+
+    .timeline-card span,
+    .timeline-card strong,
+    .timeline-card p {
+      display: block;
+    }
+
+    .timeline-card span {
+      color: var(--mint);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .timeline-card strong {
+      font-size: 1.08rem;
+      margin-bottom: 10px;
+    }
+
+    .timeline-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.94rem;
+    }
+
+    .cta-card {
+      position: relative;
+      padding: clamp(26px, 5vw, 42px);
+      border-radius: calc(var(--radius-xl) + 4px);
+      background:
+        radial-gradient(circle at top right, rgba(255, 122, 69, 0.24), transparent 24%),
+        linear-gradient(145deg, rgba(11, 28, 36, 0.96), rgba(18, 38, 46, 0.92));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .cta-copy h2 {
+      margin: 0;
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      max-width: 10ch;
+    }
+
+    .cta-copy p {
+      margin: 18px 0 0;
+      max-width: 56ch;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .vote-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .vote-chip-row span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.88rem;
+      color: var(--text);
+    }
+
+    .cta-side {
+      display: grid;
+      gap: 14px;
+    }
+
+    .cta-stat {
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .cta-stat strong,
+    .cta-stat span {
+      display: block;
+    }
+
+    .cta-stat strong {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: -0.04em;
+    }
+
+    .cta-stat span {
+      margin-top: 6px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.92rem;
+    }
+
+    .cta-card a {
+      width: fit-content;
+      min-height: 50px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .site-footer {
+      padding: 30px 0 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--muted-2);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    .mobile-dock {
+      position: fixed;
+      inset: auto 12px 12px 12px;
+      z-index: 25;
+      display: none;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      padding: 10px;
+      border-radius: 22px;
+      background: rgba(9, 21, 28, 0.84);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+    }
+
+    .mobile-dock a {
+      min-height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 0.8rem;
+      background: transparent;
+    }
+
+    .mobile-dock a.active {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 640ms ease, transform 640ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .manifesto-grid,
+      .cta-grid,
+      .systems-grid,
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        align-items: start;
+      }
+
+      .hero-visual {
+        max-width: 560px;
+      }
+
+      .agenda-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      :root {
+        --nav-height: 64px;
+      }
+
+      .page-shell {
+        width: min(calc(100% - 24px), var(--content-width));
+        padding-bottom: 118px;
+      }
+
+      .topbar {
+        align-items: start;
+        flex-direction: column;
+        padding-top: 14px;
+      }
+
+      .topnav {
+        display: none;
+      }
+
+      .mobile-dock {
+        display: grid;
+      }
+
+      .hero-stats,
+      .site-footer {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .agenda-toggle {
+        grid-template-columns: auto 1fr;
+      }
+
+      .agenda-icon {
+        grid-column: 2;
+        justify-self: end;
+      }
+
+      .agenda-panel-content {
+        padding: 0 18px 18px 18px;
+      }
+
+      .cta-copy h2,
+      .hero h1 {
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button,
+      .ghost-button,
+      .cta-card a {
+        width: 100%;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .agenda-toggle,
+      .system-card,
+      .timeline-card,
+      .note-card,
+      .stat-card,
+      .cta-stat {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <div class="brand-mark">KH</div>
+        <div class="brand-copy">
+          <strong>Kethan H</strong>
+          <span>Unit Designee candidate · NASA 2026</span>
+        </div>
+      </div>
+
+      <nav class="topnav" aria-label="Primary">
+        <a href="#home" data-nav="home">Home</a>
+        <a href="#vision" data-nav="vision">Vision</a>
+        <a href="#agenda" data-nav="agenda">Agenda</a>
+        <a href="#vote" data-nav="vote">Vote</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy reveal in-view">
+          <div class="eyebrow">Now reviewing the campaign set</div>
+
+          <div>
+            <h1><span>Build a year that actually runs well.</span></h1>
+            <p class="hero-lead">
+              I am running for Unit Designee with a simple standard: <strong>students should hear early, plan clearly, and never feel locked out of opportunities because communication was late or messy.</strong> This role already sits between the batch, NASA, and the administration. It should work like a system, not a formality.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button" href="#agenda">See the plan</a>
+            <a class="ghost-button" href="#vote">Vote on 18 Jul</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Key campaign priorities">
+            <article class="stat-card">
+              <strong>8</strong>
+              <span>practical agenda points focused on clarity, access, and follow-through.</span>
+            </article>
+            <article class="stat-card">
+              <strong>1</strong>
+              <span>shared source of truth for trophies, convention updates, and council notices.</span>
+            </article>
+            <article class="stat-card">
+              <strong>0</strong>
+              <span>interest in last-minute confusion, buried forms, or gatekept opportunities.</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <article class="portrait-card">
+            <img src="assets/photo.jpg" alt="Portrait of Kethan H">
+            <div class="portrait-overlay">
+              <strong>Kethan H</strong>
+              <span>Candidate for Unit Designee, aiming for cleaner communication, better coordination, and a more useful student council.</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="vision" class="reveal">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">A-01 · Vision</div>
+            <h2>Make the role useful every week, not visible once a year.</h2>
+            <p>
+              Unit Designee should not only announce things. It should create rhythm: opportunities tracked early, student input taken seriously, and council work made easier to follow from the outside.
+            </p>
+          </div>
+        </div>
+
+        <div class="manifesto-panel">
+          <div class="manifesto-grid">
+            <blockquote>
+              "The job is to make sure <span>no one hears about something important too late</span> and no decision feels like it arrived from nowhere."
+            </blockquote>
+
+            <div class="manifesto-notes">
+              <article class="note-card">
+                <strong>For NASA opportunities</strong>
+                <p>Every trophy, seminar, zonal, and convention update should be tracked in one visible place as soon as it is announced.</p>
+              </article>
+              <article class="note-card">
+                <strong>For council decisions</strong>
+                <p>The batch should get short, readable updates after meetings instead of relying on word-of-mouth or whoever happened to ask.</p>
+              </article>
+              <article class="note-card">
+                <strong>For student experience</strong>
+                <p>Council work should include systems that reduce friction and events that people genuinely want to show up for.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="agenda" class="reveal">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">A-02 · Agenda</div>
+            <h2>Eight concrete upgrades.</h2>
+            <p>
+              Each point below starts from how things usually work now and flips into what I would run instead. The interaction is lighter than before, works properly on touch screens, and keeps the information readable on smaller devices.
+            </p>
+          </div>
+        </div>
+
+        <div class="agenda-grid">
+          <article class="agenda-card" data-open="true">
+            <button class="agenda-toggle" type="button" aria-expanded="true">
+              <span class="agenda-index">01</span>
+              <span class="agenda-title">
+                <strong>Track every trophy, not only the famous ones.</strong>
+                <span>Awareness should not depend on who was paying attention that day.</span>
+              </span>
+              <span class="agenda-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="agenda-panel">
+              <div class="agenda-panel-inner">
+                <div class="agenda-panel-content">
+                  <p>I would maintain a running competition log with dates, requirements, and announcement timing so teams can prepare early instead of scrambling late.</p>
+                  <div class="agenda-tags"><span>ANDC</span><span>Reuben's</span><span>Design meets</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="agenda-card" data-open="false">
+            <button class="agenda-toggle" type="button" aria-expanded="false">
+              <span class="agenda-index">02</span>
+              <span class="agenda-title">
+                <strong>Make zonals and convention easier to plan for.</strong>
+                <span>More students should be able to attend because the planning happened early.</span>
+              </span>
+              <span class="agenda-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="agenda-panel">
+              <div class="agenda-panel-inner">
+                <div class="agenda-panel-content">
+                  <p>I would coordinate earlier with the Unit Secretary and administration so approvals, travel expectations, and support do not become last-minute blockers.</p>
+                  <div class="agenda-tags"><span>Approvals</span><span>Budget clarity</span><span>Earlier notice</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="agenda-card" data-open="false">
+            <button class="agenda-toggle" type="button" aria-expanded="false">
+              <span class="agenda-index">03</span>
+              <span class="agenda-title">
+                <strong>Turn the council into a real channel, not a final notice board.</strong>
+                <span>Student input should shape decisions before they are locked in.</span>
+              </span>
+              <span class="agenda-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="agenda-panel">
+              <div class="agenda-panel-inner">
+                <div class="agenda-panel-content">
+                  <p>Regular check-ins with class representatives would create a cleaner route for feedback and reduce the feeling that decisions only appear after the fact.</p>
+                  <div class="agenda-tags"><span>Class reps</span><span>Feedback</span><span>Student voice</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="agenda-card" data-open="false">
+            <button class="agenda-toggle" type="button" aria-expanded="false">
+              <span class="agenda-index">04</span>
+              <span class="agenda-title">
+                <strong>Run one coordinated council, not disconnected committees.</strong>
+                <span>Shared calendars and clear ownership reduce repeated work.</span>
+              </span>
+              <span class="agenda-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="agenda-panel">
+              <div class="agenda-panel-inner">
+                <div class="agenda-panel-content">
+                  <p>A single coordination rhythm across NASA, welfare, and events would prevent schedule clashes and make responsibilities much easier to follow.</p>
+                  <div class="agenda-tags"><span>Shared calendar</span><span>Clear roles</span><span>Less overlap</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="agenda-card" data-open="false">
+            <button class="agenda-toggle" type="button" aria-expanded="false">
+              <span class="agenda-index">05</span>
+              <span class="agenda-title">
+                <strong>Keep the batch briefed after every meeting.</strong>
+                <span>What the role learns should not stay trapped in small circles.</span>
+              </span>
+              <span class="agenda-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="agenda-panel">
+              <div class="agenda-panel-inner">
+                <div class="agenda-panel-content">
+                  <p>I would publish short written updates after council meetings and NASA sessions so important points are visible to everyone, not only to those who asked directly.</p>
+                  <div class="agenda-tags"><span>Meeting notes</span><span>Clear updates</span><span>Transparency</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="agenda-card" data-open="false">
+            <button class="agenda-toggle" type="button" aria-expanded="false">
+              <span class="agenda-index">06</span>
+              <span class="agenda-title">
+                <strong>Make council activity feel alive, not mandatory.</strong>
+                <span>Student-facing work should include things people genuinely enjoy.</span>
+              </span>
+              <span class="agenda-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="agenda-panel">
+              <div class="agenda-panel-inner">
+                <div class="agenda-panel-content">
+                  <p>Smaller hangouts, better end-of-sem energy, and formats people want to join would make council work feel less like unpaid admin and more like community.</p>
+                  <div class="agenda-tags"><span>Movie night</span><span>Hangouts</span><span>Batch culture</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="agenda-card" data-open="false">
+            <button class="agenda-toggle" type="button" aria-expanded="false">
+              <span class="agenda-index">07</span>
+              <span class="agenda-title">
+                <strong>Design merch people would actually wear.</strong>
+                <span>Better taste, more submissions, less one-person decision making.</span>
+              </span>
+              <span class="agenda-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="agenda-panel">
+              <div class="agenda-panel-inner">
+                <div class="agenda-panel-content">
+                  <p>Merch should be open to student ideas and judged by whether people would wear it outside campus, not just whether it exists in time.</p>
+                  <div class="agenda-tags"><span>Open submissions</span><span>Better design</span><span>Actually wearable</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="agenda-card" data-open="false">
+            <button class="agenda-toggle" type="button" aria-expanded="false">
+              <span class="agenda-index">08</span>
+              <span class="agenda-title">
+                <strong>Replace dead feedback forms with a system people trust.</strong>
+                <span>Anonymous feedback only matters if it is checked and acted on.</span>
+              </span>
+              <span class="agenda-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="agenda-panel">
+              <div class="agenda-panel-inner">
+                <div class="agenda-panel-content">
+                  <p>I would keep one simple anonymous feedback route that is regularly reviewed, acknowledged, and used to spot issues before they become bigger.</p>
+                  <div class="agenda-tags"><span>Anonymous</span><span>Regular review</span><span>Actionable</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="reveal" id="systems">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">A-03 · Operating Style</div>
+            <h2>How the work would feel in practice.</h2>
+            <p>
+              The point is not just better promises. It is a better operating system: fewer missed updates, cleaner student-admin communication, and a more visible rhythm to the role.
+            </p>
+          </div>
+        </div>
+
+        <div class="systems-grid">
+          <article class="system-card">
+            <span>Clarity</span>
+            <strong>One dependable place for information.</strong>
+            <p>Competitions, conventions, and council notes should live in a format everyone can understand fast on both laptop and phone.</p>
+          </article>
+          <article class="system-card">
+            <span>Timing</span>
+            <strong>Important updates should arrive early enough to matter.</strong>
+            <p>Good communication is mostly about timing. Early notice is what turns an opportunity into an actual option.</p>
+          </article>
+          <article class="system-card">
+            <span>Tone</span>
+            <strong>Organised without feeling robotic.</strong>
+            <p>The council can stay professional and still create student experiences that feel human, fun, and worth caring about.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="reveal" id="vote">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">A-04 · Vote</div>
+            <h2>Back the version of this role that communicates early and follows through.</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <span>Before events</span>
+            <strong>Earlier notice.</strong>
+            <p>Opportunities should appear with enough lead time to prepare properly.</p>
+          </article>
+          <article class="timeline-card">
+            <span>During the term</span>
+            <strong>Consistent updates.</strong>
+            <p>Students should know what is happening without hunting through old messages.</p>
+          </article>
+          <article class="timeline-card">
+            <span>Across the year</span>
+            <strong>Cleaner coordination.</strong>
+            <p>The council should feel easier to understand, easier to approach, and more worth engaging with.</p>
+          </article>
+        </div>
+
+        <div class="cta-card" style="margin-top: 18px;">
+          <div class="cta-grid">
+            <div class="cta-copy">
+              <h2>Vote Kethan H on 18 Jul.</h2>
+              <p>
+                If the role is going to sit at the center of information, planning, and representation, it should be run with structure. That is the whole pitch.
+              </p>
+              <div class="vote-chip-row">
+                <span>Unit Designee</span>
+                <span>NASA 2026</span>
+                <span>1 vote : 1 vote</span>
+              </div>
+            </div>
+
+            <div class="cta-side">
+              <article class="cta-stat">
+                <strong>18 Jul</strong>
+                <span>Voting closes. Save the date and make the choice count.</span>
+              </article>
+              <article class="cta-stat">
+                <strong>Student-first</strong>
+                <span>Transparent updates, stronger coordination, and more useful council work.</span>
+              </article>
+              <a href="#home">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Kethan H · Unit Designee Campaign · 2026</span>
+      <span>Built to read clearly on desktop and phone.</span>
+    </footer>
+  </div>
+
+  <nav class="mobile-dock" aria-label="Mobile">
+    <a href="#home" data-nav="home">Home</a>
+    <a href="#vision" data-nav="vision">Vision</a>
+    <a href="#agenda" data-nav="agenda">Agenda</a>
+    <a href="#vote" data-nav="vote">Vote</a>
+  </nav>
+
+  <script>
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    revealElements.forEach((element) => {
+      if (!element.classList.contains('in-view')) {
+        revealObserver.observe(element);
+      }
+    });
+
+    const sections = ['home', 'vision', 'agenda', 'vote']
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    const navLinks = document.querySelectorAll('[data-nav]');
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => {
+            link.classList.toggle('active', link.dataset.nav === entry.target.id);
+          });
+        }
+      });
+    }, {
+      threshold: 0.55,
+      rootMargin: '-10% 0px -35% 0px'
+    });
+
+    sections.forEach((section) => navObserver.observe(section));
+
+    const agendaCards = document.querySelectorAll('.agenda-card');
+    agendaCards.forEach((card) => {
+      const button = card.querySelector('.agenda-toggle');
+      button.addEventListener('click', () => {
+        const isOpen = card.dataset.open === 'true';
+        card.dataset.open = String(!isOpen);
+        button.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+  </script>
+</body>
+</html>
